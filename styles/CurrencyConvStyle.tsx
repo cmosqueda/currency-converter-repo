@@ -7,7 +7,7 @@ export const CurrencyConvStyles = StyleSheet.create({
     paddingHorizontal: 20,
     backgroundColor: "#f4f4f4",
     // paddingVertical: 20,
-    margin: 15,
+    marginVertical: 15,
   },
   title: {
     fontSize: 24,
@@ -15,7 +15,7 @@ export const CurrencyConvStyles = StyleSheet.create({
     textAlign: "center",
   },
   input: {
-    height: 50,
+    height: 60,
     fontSize: 36,
     borderColor: "#ccc",
     borderWidth: 1,
@@ -25,16 +25,18 @@ export const CurrencyConvStyles = StyleSheet.create({
     paddingHorizontal: 10,
     borderRadius: 5,
     backgroundColor: "#fff",
+    color: "#000",
   },
 
   wrapInputPickerLabel: {
-    fontSize: 17,
+    fontSize: 15,
   },
 
   wrapInputPicker: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    marginVertical: 5,
+    flexDirection: "column",
+    // alignItems: "flex-end",
+    // justifyContent: "space-between",
+    // marginVertical: 5,
   },
 
   key: {
@@ -73,19 +75,21 @@ export const CurrencyConvStyles = StyleSheet.create({
 
 export const PickerSelectStyles = StyleSheet.create({
   inputIOS: {
-    // height: 40,
+    height: 40,
     borderColor: "#ccc",
     borderWidth: 1,
     marginBottom: 20,
     paddingHorizontal: 10,
     borderRadius: 5,
+    color: "#000",
   },
   inputAndroid: {
-    // height: 40,
+    height: 40,
     borderColor: "#ccc",
     borderWidth: 1,
     marginBottom: 20,
     paddingHorizontal: 10,
     borderRadius: 5,
+    color: "#000",
   },
 });

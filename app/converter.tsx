@@ -48,7 +48,7 @@ export default function Converter() {
 
   //   handling numeric key press
   const handleKeyPress = (key: any) => {
-    if (key === "C") {
+    if (key === "CLEAR") {
       setAmount("");
       setConvertedAmount(null);
     } else if (key === "DEL") {
@@ -62,7 +62,7 @@ export default function Converter() {
 
   //   rendering keys
   const renderKey = (key: any) => {
-    const isConvertBtn = key === "CONV";
+    // const isConvertBtn = key === "CONV";
     const isClearBtn = key === "CLEAR";
     const isDelBtn = key === "DEL";
 
