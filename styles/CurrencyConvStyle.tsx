@@ -5,9 +5,9 @@ export const CurrencyConvStyles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     paddingHorizontal: 20,
-    backgroundColor: "#f4f4f4",
+    backgroundColor: "#D3D5D4",
     // paddingVertical: 20,
-    marginVertical: 15,
+    paddingVertical: 15,
   },
   title: {
     fontSize: 24,
@@ -17,14 +17,14 @@ export const CurrencyConvStyles = StyleSheet.create({
   input: {
     height: 60,
     fontSize: 36,
-    borderColor: "#ccc",
+    borderColor: "#000",
     borderWidth: 1,
     marginBottom: 20,
     textAlign: "center",
     paddingVertical: 10,
     paddingHorizontal: 10,
     borderRadius: 5,
-    backgroundColor: "#fff",
+    backgroundColor: "#EFEFEF",
     color: "#000",
   },
 
@@ -43,14 +43,17 @@ export const CurrencyConvStyles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#ddd",
+    backgroundColor: "#EBEBEB",
     margin: 5,
     height: 60,
     borderRadius: 5,
+    borderColor: "black",
+    borderWidth: 1,
   },
   keyText: {
     fontSize: 24,
     color: "#333",
+    fontWeight: "bold",
   },
   convertButton: {
     backgroundColor: "#4a90e2",
@@ -60,13 +63,13 @@ export const CurrencyConvStyles = StyleSheet.create({
     fontSize: 18,
   },
   clearButton: {
-    backgroundColor: "orange",
+    backgroundColor: "#FFA953",
   },
   clearButtonText: {
     color: "#fff",
   },
   delButton: {
-    backgroundColor: "red",
+    backgroundColor: "#F97068",
   },
   delButtonText: {
     color: "#fff",

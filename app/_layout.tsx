@@ -5,7 +5,11 @@ export default function RootLayout() {
     <Stack>
       <Stack.Screen
         name="index"
-        options={{ headerTitle: "Currency Converter", headerTitleAlign: "center", headerShadowVisible: true }}
+        options={{
+          headerTitle: "Exchange Rate API",
+          headerTitleAlign: "center",
+          headerShadowVisible: true,
+        }}
       />
     </Stack>
   );
