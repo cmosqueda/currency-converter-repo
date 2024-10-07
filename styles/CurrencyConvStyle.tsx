@@ -52,13 +52,13 @@ export const CurrencyConvStyles = StyleSheet.create({
     fontSize: 24,
     color: "#333",
   },
-  //   convertButton: {
-  //     backgroundColor: "#4a90e2",
-  //   },
-  //   convertButtonText: {
-  //     color: "#fff",
-  //     fontSize: 18,
-  //   },
+  convertButton: {
+    backgroundColor: "#4a90e2",
+  },
+  convertButtonText: {
+    color: "#fff",
+    fontSize: 18,
+  },
   clearButton: {
     backgroundColor: "orange",
   },

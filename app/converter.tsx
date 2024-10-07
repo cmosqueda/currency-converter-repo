@@ -22,23 +22,23 @@ export default function Converter() {
   const { fromCurrency, toCurrency, conversionRate } = currencyContext || {};
 
   //   function to initiate conversion === not using useMemo hook
-  //   const convertCurrency = () => {
-  //     if (amount === "") {
-  //       Alert.alert("Error", "Please enter an amount");
-  //       return;
-  //     }
+  const convertCurrency = () => {
+    if (amount === "") {
+      Alert.alert("Error", "Please enter an amount");
+      return;
+    }
 
-  //     axios
-  //       .get(`https://v6.exchangerate-api.com/v6/${API_KEY}/pair/${fromCurrency}/${toCurrency}/${amount}`)
-  //       .then((response) => {
-  //         setConvertedAmount(response.data.conversion_result.toFixed(2));
-  //         // convertedAmountMemo;
-  //       })
-  //       .catch((error) => {
-  //         Alert.alert("Error", "Could not fetch conversion rate");
-  //         console.error(error);
-  //       });
-  //   };
+    axios
+      .get(`https://v6.exchangerate-api.com/v6/${API_KEY}/pair/${fromCurrency}/${toCurrency}/${amount}`)
+      .then((response) => {
+        setConvertedAmount(response.data.conversion_result.toFixed(2));
+        convertedAmountMemo;
+      })
+      .catch((error) => {
+        Alert.alert("Error", "Could not fetch conversion rate");
+        console.error(error);
+      });
+  };
 
   //   memoize
   const convertedAmountMemo = useMemo(() => {
@@ -53,8 +53,8 @@ export default function Converter() {
       setConvertedAmount(null);
     } else if (key === "DEL") {
       setAmount(amount.slice(0, -1));
-      // } else if (key === "CONV") {
-      //   convertCurrency();
+    } else if (key === "CONV") {
+      convertCurrency();
     } else {
       setAmount(amount + key);
     }
@@ -62,7 +62,7 @@ export default function Converter() {
 
   //   rendering keys
   const renderKey = (key: any) => {
-    // const isConvertBtn = key === "CONV";
+    const isConvertBtn = key === "CONV";
     const isClearBtn = key === "CLEAR";
     const isDelBtn = key === "DEL";
 
@@ -70,7 +70,7 @@ export default function Converter() {
       <Pressable
         style={[
           CurrencyConvStyles.key,
-          //   isConvertBtn && CurrencyConvStyles.convertButton,
+          isConvertBtn && CurrencyConvStyles.convertButton,
           isClearBtn && CurrencyConvStyles.clearButton,
           isDelBtn && CurrencyConvStyles.delButton,
         ]}
@@ -80,7 +80,7 @@ export default function Converter() {
         <Text
           style={[
             CurrencyConvStyles.keyText,
-            // isConvertBtn && CurrencyConvStyles.convertButtonText,
+            isConvertBtn && CurrencyConvStyles.convertButtonText,
             isClearBtn && CurrencyConvStyles.clearButtonText,
             isDelBtn && CurrencyConvStyles.delButtonText,
           ]}
